@@ -1,0 +1,45 @@
+<body onload="authCheck()">
+
+<div class="sidebar">
+  <h2>Trustlock</h2>
+
+  <a onclick="go('dashboard.html')">🏠 Dashboard</a>
+  <a onclick="go('transactions.html')">📜 Transactions</a>
+  <a onclick="openTransfer()">💸 Transfer</a>
+  <a onclick="logout()">🚪 Logout</a>
+</div>
+
+<div class="main">
+
+  <div class="hero-card">
+    <h3>Total Balance</h3>
+
+    <h1 id="balance">$250,000,000</h1>
+    <button onclick="toggleBalance()">👁 Hide/Show Balance</button>
+
+    <span>+12.4% annual growth</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTransfer()">💸 Transfer</div>
+    <div class="card">🏦 Loan</div>
+    <div class="card">📈 Invest</div>
+    <div class="card">💰 Add Funds</div>
+
+  </div>
+
+  <div class="card">
+    <h2>Quick Transfer</h2>
+
+    <input id="accNum" placeholder="Account Number">
+    <input id="amount" placeholder="Amount">
+
+    <button onclick="transfer()">Send</button>
+
+    <p id="transferMsg"></p>
+  </div>
+
+</div>
+
+</body>
